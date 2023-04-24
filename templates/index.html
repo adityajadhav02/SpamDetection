@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection</title>
+</head>
+
+<body>
+    <div class="main">
+        <h2 class='head'><span>Spam Detection</h2>
+        <div class='desc'>
+            <p>Enter input or Upload a file</p>
+        </div>
+
+        <div class="container">
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                <textarea class='message' name="message" rows="7" cols="75"
+                    placeholder="Enter Input"></textarea><br />
+                <h2>OR</h2>
+                <div class="filediv"><input type="file" name="file" id="userfile"> <br><span class="smal">
+                        (Upload .csv or .zip file only)</span>
+                </div>
+                <br>
+
+                <input type="submit" class="btn" value="Predict">
+            </form>
+        </div>
+
+        <div class="predict">
+            {{prediction_text}}
+        </div>
+    </div>
+
+
+</body>
+
+</html>
