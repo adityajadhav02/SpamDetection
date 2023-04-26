@@ -12,7 +12,7 @@ This is a machine learning project built with Flask and Python for detecting spa
 
 ## Project Screenshot
 
-![Screenshot](./image.png)
+![Screenshot](/screenshot.png)
 ## Usage
 
 To run the project, follow these steps:
